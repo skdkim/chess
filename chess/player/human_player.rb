@@ -1,7 +1,7 @@
 require_relative "player"
 
 class HumanPlayer < Player
-  def initialize(color, display)
+  def initialize(color)#, display)
     super
   end
 

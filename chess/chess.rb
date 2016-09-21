@@ -7,8 +7,8 @@ class Chess
   def initialize(board = Board.new)
     @board = board
     @display = Display.new(@board)
-    player_one = HumanPlayer.new(:white, @display)
-    player_two = HumanPlayer.new(:black, @display)
+    player_one = HumanPlayer.new(:white)#, @display)
+    player_two = HumanPlayer.new(:black)#, @display)
     @players = [player_one, player_two]
     @current_player = @players.first
   end
@@ -18,8 +18,8 @@ class Chess
     until won?
       p @current_player
       begin
-        @current_player.make_move
-        # @display.get_input
+        # @current_player.make_move
+        @display.get_input
       rescue
         p "Invalid move Douche!!!"
         retry
